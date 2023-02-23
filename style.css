@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  overflow-y: hidden;
+}
+
+.webgl{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav{
+  color: orange;
+  z-index: 2;
+  position: relative;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#radius{
+  z-index: 2;
+  padding: 0.2rem;
+  border-radius: 5px;
+  width: 5rem;
+}
+
+.btn{
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: orange;
+  cursor: pointer;
+}
+
+.color_btn{
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: rgb(197, 197, 254);
+}
+
+nav a{
+  text-decoration: none;
+  color: orange;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.title{
+  color: white;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%,-25%);
+}
+
+#snackbar {
+  font-weight: bold;
+  visibility: hidden; 
+  min-width: 250px; 
+  margin-left: -125px; 
+  background-color: #fff; 
+  color: rgb(74, 236, 74);
+  text-align: center;
+  border-radius: 2px; 
+  padding: 10px; 
+  position: fixed; 
+  z-index: 1; 
+  left: 10%; 
+  bottom: 30px;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; 
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
